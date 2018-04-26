@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 
-import ShopRoute from './components/frontend/routes/ShopRoute';
-import AuthRoute from './components/frontend/routes/AuthRoute';
-import HomePage from './components/frontend/home/HomePage';
-import LoginPage from './components/frontend/login/LoginPage';
-import RegisterPage from './components/frontend/signup/RegisterPage';
-import ResetPasswordPage from './components/frontend/accountmgt/ResetPasswordPage';
-import ConfirmationPage from './components/frontend/accountmgt/ConfirmationPage';
+import ShopRoute from './components/routes/ShopRoute';
+import AuthRoute from './components/routes/AuthRoute';
+
+import HomePage from './components/home/HomePage';
+import LoginPage from './components/login/LoginPage';
+import RegisterPage from './components/signup/RegisterPage';
+import ResetPasswordPage from './components/accountmgt/ResetPasswordPage';
+import ConfirmationPage from './components/accountmgt/ConfirmationPage';
 
 const App = ({ location }) =>
     <div>
