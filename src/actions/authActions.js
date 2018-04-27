@@ -18,7 +18,7 @@ export const register = (data) => dispatch =>
         dispatch(userLoggedIn(user));
 });
 
-export const login = (credentials) => dispatch =>     
+export const login = (credentials) => dispatch =>
     api.auth.login(credentials).then(user => {
         localStorage.shopJWT = user.token;
         setAuthorizationHeader(user.token);

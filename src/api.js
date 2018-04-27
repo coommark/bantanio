@@ -8,5 +8,9 @@ export default {
             axios.post('/api/auth', { email: credentials.email, password: credentials.password }).then(res => res.data.user),
         forgotPasswordRequest: email =>
             axios.post('/api/auth/reset_password_request', { email })
+    },
+    seller: {
+        sellerRegister: data =>
+            axios.post('/api/auth/register', { email: data.email, password: data.password, firstName: data.firstName }).then(res => res.data.user)
     }
 }

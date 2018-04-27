@@ -10,10 +10,12 @@ import LoginPage from './components/login/LoginPage';
 import RegisterPage from './components/signup/RegisterPage';
 import ResetPasswordPage from './components/accountmgt/ResetPasswordPage';
 import ConfirmationPage from './components/accountmgt/ConfirmationPage';
+import SellerApplicationPage from './components/sellers/SellerApplicationPage';
 
 const App = ({ location }) =>
     <div>
         <ShopRoute location={location} path="/" exact component={HomePage} />
+        <ShopRoute location={location} path="/seller" exact component={SellerApplicationPage} />
         <AuthRoute location={location} path="/login" exact component={LoginPage} />
         <AuthRoute location={location} path="/register" exact component={RegisterPage} />
         <AuthRoute location={location} path="/reset_password" exact component={ResetPasswordPage} />

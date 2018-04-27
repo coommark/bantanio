@@ -14,13 +14,13 @@ const TopHeader = ({ isAuthenticated, logout }) => (
                             <div>
                                 <a href="#">My Account</a>
                                 <a href="#" onClick={() => logout()}>Logout</a>
-                                <a href="#">Become a Seller</a>
+                                <Link to="/seller">Become a Seller</Link>
                             </div>
                             ) : (
                             <div>
                                 <Link to="/login">Login</Link>
                                 <Link to="/register">Register</Link>
-                                <a href="#">Become a Seller</a>
+                                <Link to="/seller">Become a Seller</Link>
                             </div>
                         )}
                     </div>

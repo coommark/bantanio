@@ -14,19 +14,30 @@ class LoginPage extends React.Component {
     submit = values => {
         this.setState({loading: true })
         return this.props.login(values)
-        .then(() => this.props.history.push("/"))
-        .catch(error => {
+        .then(() => {
+            var {from} = this.props.location.state || {from: {pathname: '/'}}            
+            this.props.history.push(from)
+        })
+         .catch(error => {
             this.setState({loading: false })
             throw new SubmissionError(error.response.data.errors);
         });
     }
     render() {
+        let message = "My Account";
+
+        if(typeof this.props.location.state != "undefined" && this.props.location.state.hasOwnProperty('message')) {
+            message = this.props.location.state.message;
+        }
+
         return (
             <div className="content-page woocommerce">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h2 className="title-shop-page">My Account</h2>
+                            <h2 className="title-shop-page">
+                                {message}
+                            </h2>
                             <div className="register-content-box">
                                 <div className="row">
                                     <div className="col-md-6 col-sm-6 col-ms-12">
