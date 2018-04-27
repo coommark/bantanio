@@ -15,19 +15,9 @@ const AuthRoute = ({component: Component, ...rest}) => (
             (() => {
                 return (
                     <div className="wrap">
-                        <div id="header">
-                            <div className="header">
-                                <TopHeader />
-                                <MainHeader />
-                                <TopMenu />
-                            </div>
-                        </div>
                         <div id="content">
                             <Component {...props} />
-                        </div>
-                        <div id="footer">
-                            <Footer />
-                        </div>
+                        </div>                        
                     </div>
                 )
             })()
